@@ -160,7 +160,7 @@ function like(){
 
     for(let i=0; i<heartBtnArray.length; i++){
         heartBtnArray[i].addEventListener('click', () => {
-            heartBtnArray[i].childNodes[0].src = '/liked-heart-btn.svg';
+            heartBtnArray[i].childNodes[0].src = 'img/liked-heart-btn.svg';
             createCookie(heartBtnArray[i]); 
             createFavoriteJoke(heartBtnArray[i].id);
         })
@@ -197,20 +197,20 @@ function createResponse(obj, divToAppend){
     likeBtn.appendChild(heartImg);
     likeBtn.id = obj['id'];
     if (divToAppend == 'fav-div'){
-        heartImg.src = '/liked-heart-btn.svg';
+        heartImg.src = 'img/liked-heart-btn.svg';
 
         likeBtn.addEventListener('click', ()=>{
             deleteCookie(likeBtn.id);
             responseDiv.style.display = 'none';
-            heartImg.src = '/heart-btn.svg';
+            heartImg.src = 'img/heart-btn.svg';
         })
     } else {
-        heartImg.src = '/heart-btn.svg';
+        heartImg.src = 'img/heart-btn.svg';
         likeBtn.classList.add('unclicked');
 
         if(document.cookie.includes(likeBtn.id)){
 
-            heartImg.src = '/liked-heart-btn.svg';
+            heartImg.src = 'img/liked-heart-btn.svg';
             likeBtn.classList.remove('unclicked');
         }
     }
@@ -219,7 +219,7 @@ function createResponse(obj, divToAppend){
     let messageIconBtn = createEl('button','message-icon-btn');
     let messageIcon = createEl('img');
     messageIconBtn.appendChild(messageIcon);
-    messageIcon.src = '/message-icon.svg';
+    messageIcon.src = 'img/message-icon.svg';
     responseDiv.appendChild(messageIconBtn);
 
     let jokeBody = createEl('div','joke-body');
@@ -230,9 +230,9 @@ function createResponse(obj, divToAppend){
     responseIDlink.href = obj['url'];
     responseIDlink.innerHTML = obj['id'];
     let linkImg = createEl('img','link-img');
-    linkImg.src = '/link.svg';
+    linkImg.src = 'img/link.svg';
     let linkImgArrow = createEl('img','link-img-arrow');
-    linkImgArrow.src = '/linkArrow.svg';
+    linkImgArrow.src = 'img/linkArrow.svg';
     responseID.appendChild(responseIDlink);
     responseID.appendChild(linkImg);
     responseID.appendChild(linkImgArrow);
