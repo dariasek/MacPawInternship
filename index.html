@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="pretty.css" rel="stylesheet">
+    <title>MacPaw</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="main-div-wrap"></div>
+            <div id="main-div">
+                <div id="intro-div">
+                    <div class="msi">
+                        MSI 2020
+                    </div>
+                    <div class="tablet-phone-show-fav-btn">
+                        <button class="show-fav">
+                            <p class="show-fav-line-1"></p>
+                            <p class="show-fav-line-2"></p>
+                        </button>
+                        <p>Favourite</p>
+                    </div>
+                </div>
+                <p class="hey">
+                    Hey!<br>
+                    <span class="find-joke">Let’s try to find a joke for you:</span>
+                </p>
+                <div id="joke-request">
+                    <div class="joke-request-input">
+                        <button id="random-radio" class="radio-b"></button>
+                        <label>Random</label><br>
+                    </div>
+                    <div class="joke-request-input">
+                        <button id="categories-radio" class="radio-b"></button>
+                        <label>From categories</label><br/>
+                        <div id="categories">
+                            <input type="button" class="categories-btn" value="animal" id="animal-btn">
+                            <input type="button" class="categories-btn" value="career" id="career-btn">
+                            <input type="button" class="categories-btn" value="celebrity" id="celebrity-btn">
+                            <input type="button" class="categories-btn" value="dev" id="dev-btn">
+                        </div>
+                    </div>
+                    <div class="joke-request-input">
+                        <button id="search-radio" class="radio-b"></button>
+                        <label>Search</label>
+                        <input id="search-line" placeholder="Free text search...">
+                    </div>
+                </div>
+                <button id="main-btn">Get a joke!</button>
+                <div id="joke-response"></div>
+            </div>
+        <div id="fav-div">
+            <div class="tablet-phone-hide-fav-btn">
+                <button class="hide-fav">
+                    <img src="/fav-hide-icon-line.svg" class="hide-fav-lines">
+                </button>
+                <p class="fav-p">Favourite</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
